@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import { Row, Col, Container } from "react-bootstrap"
 import HeaderImg from '../assets/img/header-img.svg'
+import HeaderChar from '../assets/img/header_character.png'
 import 'animate.css';
 import TrackVisibility from 'react-on-screen'
 
@@ -47,14 +48,14 @@ export const Banner = () => {
                         <TrackVisibility>
                         {({ isVisible }) =>
                             <div className={isVisible ? "animate__animated animate__fadeInUp" : "invisible"}>
-                                <span className="tagline"> Miri's Portfolio</span>
+                                {/* <span className="tagline"> Miri's Portfolio</span> */}
                                 <h1>{"Hi! I'm Miri, a "}<span className="wrap">{text}</span></h1>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
                             </div>}
                         </TrackVisibility>
                     </Col>
                     <Col xs={12} md={6} xl={5}>
-                        <img src={HeaderImg} alt="Header Img" />
+                        <img src={HeaderChar} alt="Header Img" />
                     </Col>
                 </Row>
             </Container>
