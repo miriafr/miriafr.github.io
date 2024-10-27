@@ -4,6 +4,7 @@ import HeaderImg from '../assets/img/header-img.svg'
 import HeaderChar from '../assets/img/header_character.png'
 import 'animate.css';
 import TrackVisibility from 'react-on-screen'
+import  LeoTooltip  from "./Tooltip"
 
 export const Banner = () => {
     const [loopNum, setLoopNum] = useState(0);
@@ -12,7 +13,7 @@ export const Banner = () => {
     const toRotate = ["Web Developer", "Radio Anchor", "Pop Enthusiast"];
     const [text, setText] = useState('W');
     const [delta, setDelta] = useState(100 - Math.random() * 100);
-    const wordPeriod = 2000;
+    const wordPeriod = 1500;
 
     useEffect(() => {
         let ticker = setInterval(() => {
@@ -36,7 +37,7 @@ export const Banner = () => {
         } else if (isDeleting && updatedText === '') {
             setIsDeleting(false);
             setLoopNum(loopNum + 1);
-            setDelta(500);
+            setDelta(200);
         }
     }
 
