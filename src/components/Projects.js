@@ -1,11 +1,36 @@
 import { Container, Row, Nav, Tab, Col } from "react-bootstrap";
+import { useState, useEffect } from 'react';
 import { ProjectCard } from "./ProjectCard";
 import colorSharp2 from "../assets/img/color-sharp2.png"
 import proImg1 from "../assets/img/project-img1.png"
 import proImg2 from "../assets/img/project-img2.png"
 import proImg3 from "../assets/img/project-img3.png"
+import 'animate.css';
+import Carousel from "react-multi-carousel";
 
 export const Projects = () => {
+    const [activeTab, setActiveTab] = useState('first');
+    useEffect(() => {}, [activeTab]);
+
+    const responsive = {
+        superLargeDesktop: {
+            breakpoint: { max: 4000, min: 3000 },
+            items: 3
+        },
+        desktop: {
+            breakpoint: { max: 3000, min: 1024 },
+            items: 3
+        },
+        tablet: {
+            breakpoint: { max: 1024, min: 464 },
+            items: 2
+        },
+        mobile: {
+            breakpoint: { max: 464, min: 0 },
+            items: 1
+        }
+    };
+
     const projects = [
         {
             title: "Final Project",
@@ -38,6 +63,13 @@ export const Projects = () => {
             imgUrl: proImg3,
         },
     ];
+    const miscProjects = [
+        {
+            title: "Final Project",
+            description: "Mobile App with neural network",
+            imgUrl: proImg1,
+        },
+    ];
 
     return (
         <section className="project" id="project">
@@ -46,7 +78,7 @@ export const Projects = () => {
                     <Col size={12}>
                         <h2>Projects</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                        <Tab.Container id="projects-tabs" defaultActiveKey="first">
+                        <Tab.Container id="projects-tabs" defaultActiveKey="first" onSelect={(tab) => setActiveTab(tab)}>
                             <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                                 <Nav.Item>
                                     <Nav.Link eventKey="first">Tab 1</Nav.Link>
@@ -54,33 +86,46 @@ export const Projects = () => {
                                 <Nav.Item>
                                     <Nav.Link eventKey="second">Tab 2</Nav.Link>
                                 </Nav.Item>
-                                <Nav.Item>
-                                    <Nav.Link eventKey="third">Tab 3</Nav.Link>
-                                </Nav.Item>
                             </Nav>
                             <Tab.Content>
                                 <Tab.Pane eventKey="first">
-                                    <Row>
-                                        {
-                                            projects.map((project, index) => {
-                                                return (
-                                                    <ProjectCard
-                                                        key={index}
-                                                        {...project}
-                                                    />
-                                                )
-                                            })
-                                        }
+                                    <Row className="animate__animated animate__fadeIn carousel-container">
+                                        {activeTab === 'first' && (
+                                            <Carousel id="first" responsive={responsive} infinite={true} className="about-slider">
+                                                {projects.map((project, index) => {
+                                                    return (
+                                                        <div key={index}>
+                                                            <ProjectCard
+                                                                key={index}
+                                                                {...project}
+                                                            />
+                                                        </div>
+                                                    )
+                                                })}
+                                            </Carousel>)}
                                     </Row>
                                 </Tab.Pane>
-                                <Tab.Pane eventKey="second">Cool</Tab.Pane>                            <Tab.Pane eventKey="second"></Tab.Pane>
-                                <Tab.Pane eventKey="third">Cool Cool</Tab.Pane>
+                                <Tab.Pane eventKey="second">
+                                    <Row className="animate__animated animate__fadeIn carousel-container">
+                                        {activeTab === 'second' && (
+                                        <Carousel id="second" responsive={responsive} infinite={true} className="about-slider">
+                                            {miscProjects.map((project, index) => {
+                                                return (
+                                                    <div key={index}>
+                                                        <ProjectCard
+                                                            key={index}
+                                                            {...project}
+                                                        />
+                                                    </div>
+                                                )
+                                            })}
+                                        </Carousel>)}
+                                    </Row></Tab.Pane>
                             </Tab.Content>
                         </Tab.Container>
                     </Col>
                 </Row>
             </Container>
-            <img className="background-image-right" src={colorSharp2} />
         </section>
     )
 }
