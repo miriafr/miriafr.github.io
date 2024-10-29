@@ -3,7 +3,7 @@ import "react-multi-carousel/lib/styles.css";
 import aboutImg from "../assets/img/about-image.jpeg"
 export const AboutMe = () => {
     return (
-        <section className="about" id="skills">
+        <section className="about" id="about">
             <Container>
                 <Row className="align-items-center about-bx">
                         <Col sm={12} xs={12} md={6} xl={4}>

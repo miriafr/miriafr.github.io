@@ -2,7 +2,6 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { useState, useEffect } from 'react';
-import logo from '../assets/img/logo.svg';
 import navIcon1 from '../assets/img/nav-icon1.svg';
 import navIcon2 from '../assets/img/nav-icon2.svg';
 import navIcon3 from '../assets/img/nav-icon3.svg';
@@ -10,7 +9,6 @@ import navIcon4 from '../assets/img/nav-icon4.svg';
 
 export const NavBar = () => {
     const [activeLink, setActiveLink] = useState('home');
-    //change bg color once user scrolles
     const [scrolled, setScrolled] = useState(false);
 
     useEffect(() => {
