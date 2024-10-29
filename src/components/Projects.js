@@ -1,7 +1,7 @@
 import { Container, Row, Nav, Tab, Col } from "react-bootstrap";
 import { useState, useEffect } from 'react';
 import { ProjectCard } from "./ProjectCard";
-import colorSharp2 from "../assets/img/color-sharp2.png"
+import { ProjectModal } from "./ProjectModal";
 import proImg1 from "../assets/img/project-img1.png"
 import proImg2 from "../assets/img/project-img2.png"
 import proImg3 from "../assets/img/project-img3.png"
@@ -9,8 +9,10 @@ import 'animate.css';
 import Carousel from "react-multi-carousel";
 
 export const Projects = () => {
+    const [showModal, setShowModal] = useState(false);
+    const [selectedItem, setSelectedItem] = useState(null);
     const [activeTab, setActiveTab] = useState('first');
-    useEffect(() => {}, [activeTab]);
+    useEffect(() => { }, [activeTab]);
 
     const responsive = {
         superLargeDesktop: {
@@ -30,6 +32,11 @@ export const Projects = () => {
             items: 1
         }
     };
+    const handleShowModal = (item) => {
+        setSelectedItem(item);
+        setShowModal(true);
+    };
+    const handleCloseModal = () => setShowModal(false);
 
     const projects = [
         {
@@ -81,20 +88,20 @@ export const Projects = () => {
                         <Tab.Container id="projects-tabs" defaultActiveKey="first" onSelect={(tab) => setActiveTab(tab)}>
                             <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                                 <Nav.Item>
-                                    <Nav.Link eventKey="first">Tab 1</Nav.Link>
+                                    <Nav.Link eventKey="first">Coding Projects</Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <Nav.Link eventKey="second">Tab 2</Nav.Link>
+                                    <Nav.Link eventKey="second">Miscellaneous</Nav.Link>
                                 </Nav.Item>
                             </Nav>
                             <Tab.Content>
                                 <Tab.Pane eventKey="first">
                                     <Row className="animate__animated animate__fadeIn carousel-container">
                                         {activeTab === 'first' && (
-                                            <Carousel id="first" responsive={responsive} infinite={true} className="about-slider">
+                                            <Carousel id="first" responsive={responsive} centerMode={true} focusOnSelect={false} infinite={true} className="projects-slider">
                                                 {projects.map((project, index) => {
                                                     return (
-                                                        <div key={index}>
+                                                        <div key={index} className="item" onClick={() => handleShowModal(project)}>
                                                             <ProjectCard
                                                                 key={index}
                                                                 {...project}
@@ -108,23 +115,24 @@ export const Projects = () => {
                                 <Tab.Pane eventKey="second">
                                     <Row className="animate__animated animate__fadeIn carousel-container">
                                         {activeTab === 'second' && (
-                                        <Carousel id="second" responsive={responsive} infinite={true} className="about-slider">
-                                            {miscProjects.map((project, index) => {
-                                                return (
-                                                    <div key={index}>
-                                                        <ProjectCard
-                                                            key={index}
-                                                            {...project}
-                                                        />
-                                                    </div>
-                                                )
-                                            })}
-                                        </Carousel>)}
+                                            <Carousel id="second" responsive={responsive} centerMode={true} infinite={true} focusOnSelect={false} className="projects-slider">
+                                                {miscProjects.map((project, index) => {
+                                                    return (
+                                                        <div key={index} className="item">
+                                                            <ProjectCard
+                                                                key={index}
+                                                                {...project}
+                                                            />
+                                                        </div>
+                                                    )
+                                                })}
+                                            </Carousel>)}
                                     </Row></Tab.Pane>
                             </Tab.Content>
                         </Tab.Container>
                     </Col>
                 </Row>
+                <ProjectModal showModal={showModal} handleClose={handleCloseModal} project={selectedItem} />
             </Container>
         </section>
     )

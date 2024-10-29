@@ -1,10 +1,11 @@
 import './App.css';
-import { NavBar } from './components/NavBar';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { NavBar } from './components/NavBar';
 import { Banner } from './components/Banner';
 import { AboutMe } from './components/AboutMe';
 import { Projects } from './components/Projects';
 import { Footer } from './components/Footer';
+import { Contact } from './components/Contact';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Banner />
       <AboutMe />
       <Projects />
+      {/* <Contact /> */}
       <Footer />
     </div>
   );

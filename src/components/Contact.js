@@ -1,7 +1,6 @@
 import { useState } from "react"
 import { Col, Container, Row } from "react-bootstrap";
 import contactImg from "../assets/img/contact-img.svg"
-import(useState)
 export const Contact = () => {
     const formInit = {
         firstName: '',
@@ -72,7 +71,8 @@ export const Contact = () => {
                                 {
                                     status.message && 
                                     <Col>
-                                    <p className={status.success === false ? "dange" : success}>{status.message}</p></Col>
+                                    {/* <p className={status.success === false ? "dange" : success}>{status.message}</p> */}
+                                    </Col>
                                 }
                             </Row>
                         </form>
