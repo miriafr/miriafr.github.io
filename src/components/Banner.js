@@ -10,7 +10,7 @@ export const Banner = () => {
     const [loopNum, setLoopNum] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
     //todo: define this actually
-    const toRotate = ["Web Developer", "Radio Anchor", "Pop Enthusiast"];
+    const toRotate = ["Web Developer", "Radio Host", "Creative Engineer"];
     const [text, setText] = useState('W');
     const [delta, setDelta] = useState(100 - Math.random() * 100);
     const wordPeriod = 1500;
