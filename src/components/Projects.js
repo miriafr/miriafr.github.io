@@ -1,7 +1,6 @@
 import { Container, Row, Nav, Tab, Col } from "react-bootstrap";
 import { useState, useEffect } from 'react';
 import { ProjectCard } from "./ProjectCard";
-import { ProjectModal } from "./ProjectModal";
 import proImg1 from "../assets/img/project-img1.png"
 import proImg2 from "../assets/img/project-img2.png"
 import proImg3 from "../assets/img/project-img3.png"
@@ -11,10 +10,17 @@ import proImg6 from '../assets/img/project-img6.png'
 import proImg7 from '../assets/img/project-img7.png'
 import 'animate.css';
 import Carousel from "react-multi-carousel";
+import { Collapse } from "react-bootstrap";
+import { HackathonProject } from "./Projects/HackathonProject";
+import { FinalProjet } from "./Projects/FinalProject";
+import { HciProject } from "./Projects/HciProject";
+import { PlayAlongProject } from "./Projects/PlayAlongProject";
+import { PortfolioProject } from "./Projects/PortfolioProject";
+import { RadioProject } from "./Projects/RadioProject";
+import { PodcastProject } from "./Projects/PodcastProject";
+import { AiProject } from "./Projects/AiProject";
 
 export const Projects = () => {
-    const [showModal, setShowModal] = useState(false);
-    const [selectedItem, setSelectedItem] = useState(null);
     const [activeTab, setActiveTab] = useState('first');
     useEffect(() => { }, [activeTab]);
 
@@ -29,49 +35,67 @@ export const Projects = () => {
         },
         tablet: {
             breakpoint: { max: 1024, min: 464 },
-            items: 2
+            items: 1
         },
         mobile: {
             breakpoint: { max: 464, min: 0 },
             items: 1
         }
     };
-    const handleShowModal = (item) => {
-        setSelectedItem(item);
-        setShowModal(true);
-    };
-    const handleCloseModal = () => setShowModal(false);
 
+    const [selectedProject, setSelectedProject] = useState(null);
+    const [isExpanded, setIsExpanded] = useState(false);
+
+    const handleCardClick = (project) => {
+        if (!isExpanded) {
+            setSelectedProject(project);
+            setIsExpanded(true);
+        } else {
+            if (project.title === selectedProject.title) {
+                setIsExpanded(false);
+                setTimeout(() => setSelectedProject(null), 300);
+            } else{
+                setSelectedProject(project);
+            }
+        }
+    };
+    const handleClose = () => {
+        setIsExpanded(false);
+        setTimeout(() => setSelectedProject(null), 300);
+    }
     const projects = [
         {
             title: "Capstone Project",
-            description: "Mobile App with AI photo recognition",
+            description: "Mobile App with deep learning photo recognition",
             imgUrl: proImg1,
-            projUrl: "final-project"
+            detailsComponent: FinalProjet
         },
         {
             title: "HUJI Hackathon 2021",
-            description: "Mobile App, FrontEnd, UX/UI basic design",
+            description: "Mobile App, FrontEnd, UX/UI design",
             imgUrl: proImg2,
-            projUrl: "final-project"
+            detailsComponent: HackathonProject
         },
         {
             title: "HCI Intro Project",
             description: "3D Design & Movement Recognition",
             imgUrl: proImg3,
-            projUrl: "final-project"
+            projUrl: "final-project",
+            detailsComponent: HciProject
         },
         {
             title: "Play Along",
             description: "Mobile App",
             imgUrl: proImg4,
-            projUrl: "final-project"
+            projUrl: "final-project",
+            detailsComponent: PlayAlongProject
         },
         {
             title: "Personal Portfolio",
             description: "React Webapp",
             imgUrl: proImg5,
-            projUrl: "final-project"
+            projUrl: "final-project",
+            detailsComponent: PortfolioProject
         },
     ];
     const miscProjects = [
@@ -79,11 +103,19 @@ export const Projects = () => {
             title: "GLZ + GLGLZ",
             description: "radio host",
             imgUrl: proImg6,
+            detailsComponent: RadioProject
         },
         {
             title: "Commercial Podcasts",
             description: "",
             imgUrl: proImg7,
+            detailsComponent: PodcastProject
+        },
+        {
+            title: "Commercial Podcasts",
+            description: "",
+            imgUrl: proImg7,
+            detailsComponent: AiProject
         },
 
     ];
@@ -94,7 +126,7 @@ export const Projects = () => {
                 <Row>
                     <Col size={12}>
                         <h2>Projects</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                        <p className="projects-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
                         <Tab.Container id="projects-tabs" defaultActiveKey="first" onSelect={(tab) => setActiveTab(tab)}>
                             <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                                 <Nav.Item>
@@ -111,7 +143,7 @@ export const Projects = () => {
                                             <Carousel id="first" responsive={responsive} centerMode={true} focusOnSelect={false} infinite={true} className="projects-slider">
                                                 {projects.map((project, index) => {
                                                     return (
-                                                        <div key={index} className="item" onClick={() => handleShowModal(project)}>
+                                                        <div key={index} className="item" onClick={() => handleCardClick(project)}>
                                                             <ProjectCard
                                                                 key={index}
                                                                 {...project}
@@ -137,12 +169,33 @@ export const Projects = () => {
                                                     )
                                                 })}
                                             </Carousel>)}
-                                    </Row></Tab.Pane>
+                                    </Row>
+                                </Tab.Pane>
                             </Tab.Content>
                         </Tab.Container>
                     </Col>
                 </Row>
-                <ProjectModal showModal={showModal} handleClose={handleCloseModal} project={selectedItem} />
+                <Row>
+                    <Col>
+                        <Collapse in={isExpanded}>
+                            {/* <div className={`project-details ${isExpanded ? "expanded" : ""}`}>
+                    {selectedProject && (
+                    <selectedProject.detailsComponent />
+                )}
+                </div> */}
+                            <div className="project-details-container">
+                                {selectedProject && (
+                                    <div className="project-details-content">
+                                        <selectedProject.detailsComponent />
+                                        <button className="btn btn-secondary" onClick={handleClose}>
+                                            Close
+                                        </button>
+                                    </div>
+                                )}
+                            </div>
+                        </Collapse>
+                    </Col>
+                </Row>
             </Container>
         </section>
     )
