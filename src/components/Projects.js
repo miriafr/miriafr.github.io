@@ -5,6 +5,10 @@ import { ProjectModal } from "./ProjectModal";
 import proImg1 from "../assets/img/project-img1.png"
 import proImg2 from "../assets/img/project-img2.png"
 import proImg3 from "../assets/img/project-img3.png"
+import proImg4 from '../assets/img/project-img4.png'
+import proImg5 from '../assets/img/project-img5.png'
+import proImg6 from '../assets/img/project-img6.png'
+import proImg7 from '../assets/img/project-img7.png'
 import 'animate.css';
 import Carousel from "react-multi-carousel";
 
@@ -40,42 +44,48 @@ export const Projects = () => {
 
     const projects = [
         {
-            title: "Final Project",
-            description: "Mobile App with neural network",
+            title: "Capstone Project",
+            description: "Mobile App with AI photo recognition",
             imgUrl: proImg1,
+            projUrl: "final-project"
         },
         {
-            title: "Radio Hosting",
-            description: "Hosted Radio and stuff",
+            title: "HUJI Hackathon 2021",
+            description: "Mobile App, FrontEnd, UX/UI basic design",
             imgUrl: proImg2,
+            projUrl: "final-project"
         },
         {
-            title: "UX Projects",
-            description: "Did all sorts of stuff like that",
+            title: "HCI Intro Project",
+            description: "3D Design & Movement Recognition",
             imgUrl: proImg3,
+            projUrl: "final-project"
         },
         {
-            title: "Project 4",
-            description: "more stuff I don't think about",
-            imgUrl: proImg1,
+            title: "Play Along",
+            description: "Mobile App",
+            imgUrl: proImg4,
+            projUrl: "final-project"
         },
         {
-            title: "Project 5",
-            description: "I'm a fraud",
-            imgUrl: proImg2,
-        },
-        {
-            title: "Project 6",
-            description: "LOL you think you have enough stuff",
-            imgUrl: proImg3,
+            title: "Personal Portfolio",
+            description: "React Webapp",
+            imgUrl: proImg5,
+            projUrl: "final-project"
         },
     ];
     const miscProjects = [
         {
-            title: "Final Project",
-            description: "Mobile App with neural network",
-            imgUrl: proImg1,
+            title: "GLZ + GLGLZ",
+            description: "radio host",
+            imgUrl: proImg6,
         },
+        {
+            title: "Commercial Podcasts",
+            description: "",
+            imgUrl: proImg7,
+        },
+
     ];
 
     return (

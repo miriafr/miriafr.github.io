@@ -378,6 +378,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-bottom: 24px;
   height: 300px;
 }
+.proj-imgbx img{
+  max-width: 100%;
+  height: 100%
+}
 .proj-imgbx::before {
   content: "";
   background: linear-gradient(90.21deg, var(--button-color) -5.91%, var(--header-text) 111.58%);
@@ -425,6 +429,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .project-slider .item img{
   width:100%;
 }
+.project-slider .item img{
+  width:500px;
+}
 .project-modal{
   color: var(--header-text);
   border-radius: 30px;
@@ -438,6 +445,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background-color: var(--secondary-background);
   border-radius: 30px;
   overflow: hidden;
+}
+.project-modal img{
+  border-radius: 30px;
 }
 /************ Project Page Css ************/
 .project-page{
