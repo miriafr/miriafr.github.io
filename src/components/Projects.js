@@ -66,13 +66,13 @@ export const Projects = () => {
     const projects = [
         {
             title: "Capstone Project",
-            description: "Mobile App with deep learning photo recognition",
+            description: "Mobile app with deep learning computer vision",
             imgUrl: proImg1,
             detailsComponent: FinalProjet
         },
         {
             title: "HUJI Hackathon 2021",
-            description: "Mobile App, FrontEnd, UX/UI design",
+            description: "Front-end web development and mobile app design",
             imgUrl: proImg2,
             detailsComponent: HackathonProject
         },

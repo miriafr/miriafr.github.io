@@ -12,8 +12,9 @@ export const FinalProjet = () => {
                     <h2>Capstone Project: Intelligent Recipe Recommendation App</h2>
                     <br />
                     <h5>
-                        <b>Project type: </b>Mobile app, Deep learning, Computer vision, Data processing <br />
-                        <b>Technologies used: </b>PyTorch, Android Development
+                        <b>Project Type: </b>Mobile app, Deep learning, Computer vision, Data processing <br />
+                        <b>Technologies Used: </b>PyTorch, Android app development<br/>
+                        <b>Time Frame: </b>Fall 2020 - Spring 2021
                     </h5>
                     <br />
                     <p>
@@ -32,22 +33,22 @@ export const FinalProjet = () => {
                     <figcaption>Fridge Image Detection</figcaption>
                 </Col>
                 <Col md={9} sm={12} xs={12}>
-                    <h5>Process</h5>
+                    <h5><b>Process</b></h5>
                     <p>
-                        To achieve our goal, I broke the challenge down into smaller steps. <br /><br />
+                        To achieve our goal, I broke the challenge down into smaller steps. <br />
                         First, I researched existing neural network models and frameworks, realizing that given our time and
                         resource constraints, we should focus on retraining an existing model rather than building a completely new one.
-                        I selected a model that was capable of running on device without relying on internet connectivity and offered high accuracy. <br /><br />
+                        I selected a model that was capable of running on device without relying on internet connectivity and offered high accuracy. <br />
 
-                        Next, I processed our data, using the open-source OpenImage dataset, that we filtered into a collection of about 32,000 food images and 47 food item categories. <br /><br />
+                        Next, I processed our data, using the open-source OpenImage dataset, that we filtered into a collection of about 32,000 food images and 47 food item categories. <br />
                     </p>
                 </Col>
             </Row>
             <Row>
                 <Col size={12}>
                     <p>
-                        This was my first time training a large scale neural network model,
-                        so I had to learn how to adapt to limited resources and adjust the parameters and requirements for it to match my desired outcome.<br /><br />
+                        <br/>This was my first time training a large scale neural network model,
+                        so I had to learn how to adapt to limited resources and adjust the parameters and requirements for it to match my desired outcome.<br />
                         With my prior experience in Android app development, I explored basic UX patterns and designed the app.
                         Thanks to the help of our test users, I prioritized a clear and intuitive user flow while maintaining functionality.<br /><br />
                     </p>
@@ -55,7 +56,7 @@ export const FinalProjet = () => {
             </Row>
             <Row>
                 <Col md={6}>
-                    <h5>Lessons</h5>
+                    <h5><b>Lessons</b></h5>
                     <ol>
                         <li>Breaking down a large scale project into smaller, more manageable steps helped us maintain progress
                             and allowed for better testing and validation at each stage. </li>
@@ -66,7 +67,7 @@ export const FinalProjet = () => {
                 </Col>
                 <Col className="image-col" md={6} sm={12}>
                     <img className="project-img wide" src={img2} />
-                    <figcaption>Initial App design and Completed Design</figcaption>
+                    <figcaption>Initial App Design vs. Completed Design</figcaption>
                 </Col>
             </Row>
         </Container>
