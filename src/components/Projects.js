@@ -72,7 +72,7 @@ export const Projects = () => {
         },
         {
             title: "HUJI Hackathon 2021",
-            description: "Front-end web development and mobile app design",
+            description: "Front-end web and mobile app development",
             imgUrl: proImg2,
             detailsComponent: HackathonProject
         },
