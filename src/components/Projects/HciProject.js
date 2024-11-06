@@ -32,7 +32,7 @@ export const HciProject = () => {
                     <img src={proGif1} className="project-img" ></img>
                 </Col>
                 <Col size={8}>
-                    <h5>Process</h5>
+                    <h5><b>Process</b></h5>
                     <p>
                         This project was a collaborative effort, and we were all involved in every step, figuring out and learning at each stage. <br />
                         Although all three of us had a solid understanding of signal processing theory, applying it in new software environments presented a significant learning curve.<br/><br/>
