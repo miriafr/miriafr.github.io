@@ -15,7 +15,7 @@ function LeoTooltip(){
       delay={{ show: 250, hide: 250 }}
       overlay={renderTooltip}
     >
-        <u>my dog</u>
+        <u>my dog, Leo</u>
     </OverlayTrigger>
   );
 }

@@ -13,7 +13,7 @@ export const HciProject = () => {
                     <h2>Gesture-Based Crowd Simulation - HCI Final Project</h2><br />
                     <h5>
                         <b>Project Type: </b>Gesture Recognition, Digital Signal Processing, 3D Design, Arduino<br />
-                        <b>Technologies Used: </b>Arduino, Rhino 3D, Grasshopper<br />
+                        <b>Technologies Used: </b>Arduino, Rhino, Grasshopper<br />
                         <b>Time Frame: </b>Winter 2021<br />
                     </h5>
                     <br />

@@ -8,6 +8,8 @@ import proImg4 from '../assets/img/project-img4.png'
 import proImg5 from '../assets/img/project-img5.png'
 import proImg6 from '../assets/img/project-img6.png'
 import proImg7 from '../assets/img/project-img7.png'
+import proImg8 from '../assets/img/project-img8.jpeg'
+
 import 'animate.css';
 import Carousel from "react-multi-carousel";
 import { Collapse } from "react-bootstrap";
@@ -66,7 +68,7 @@ export const Projects = () => {
     const projects = [
         {
             title: "Capstone Project",
-            description: "Mobile app with deep learning computer vision",
+            description: "Mobile app with deep-learning computer vision",
             imgUrl: proImg1,
             detailsComponent: FinalProjet
         },
@@ -101,7 +103,7 @@ export const Projects = () => {
     const miscProjects = [
         {
             title: "GLZ + GLGLZ",
-            description: "radio host",
+            description: "Radio host",
             imgUrl: proImg6,
             detailsComponent: RadioProject
         },
@@ -112,9 +114,9 @@ export const Projects = () => {
             detailsComponent: PodcastProject
         },
         {
-            title: "Commercial Podcasts",
-            description: "",
-            imgUrl: proImg7,
+            title: "AI Project",
+            description: "AI Reinforcment Learning and Pixel Design",
+            imgUrl: proImg8,
             detailsComponent: AiProject
         },
 
@@ -160,7 +162,7 @@ export const Projects = () => {
                                             <Carousel id="second" responsive={responsive} centerMode={true} infinite={true} focusOnSelect={false} className="projects-slider">
                                                 {miscProjects.map((project, index) => {
                                                     return (
-                                                        <div key={index} className="item">
+                                                        <div key={index} className="item" onClick={() => handleCardClick(project)}>
                                                             <ProjectCard
                                                                 key={index}
                                                                 {...project}
@@ -178,11 +180,6 @@ export const Projects = () => {
                 <Row>
                     <Col>
                         <Collapse in={isExpanded}>
-                            {/* <div className={`project-details ${isExpanded ? "expanded" : ""}`}>
-                    {selectedProject && (
-                    <selectedProject.detailsComponent />
-                )}
-                </div> */}
                             <div className="project-details-container">
                                 {selectedProject && (
                                     <div className="project-details-content">
