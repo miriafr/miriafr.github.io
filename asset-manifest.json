@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/static/css/main.36e0b3b7.css",
+    "main.js": "/static/js/main.862fc871.js",
+    "static/js/453.298f5782.chunk.js": "/static/js/453.298f5782.chunk.js",
+    "static/media/hci-proj-gif1.gif": "/static/media/hci-proj-gif1.9160c0b74e8c88914f3a.gif",
+    "static/media/ai-proj-gif1.gif": "/static/media/ai-proj-gif1.7a5a4eea8010c4d67b96.gif",
+    "static/media/hci-proj-img1.png": "/static/media/hci-proj-img1.b4c3fb1a90b0606599b8.png",
+    "static/media/header_character.png": "/static/media/header_character.3b24a88d3375a610c589.png",
+    "static/media/final-proj-img1.png": "/static/media/final-proj-img1.6e08b8bf7c9e576249a1.png",
+    "static/media/final-proj-img2.png": "/static/media/final-proj-img2.2b0b9351b734127c6043.png",
+    "static/media/leo-image.jpeg": "/static/media/leo-image.75a944f01006ad0bcc8e.jpeg",
+    "static/media/project-img4.png": "/static/media/project-img4.4eb223f4aed9ff7906fd.png",
+    "static/media/hci-proj-img2.png": "/static/media/hci-proj-img2.345d0334451db004cbc2.png",
+    "static/media/project-img3.png": "/static/media/project-img3.af69937a8ffb9472b9de.png",
+    "static/media/project-img1.png": "/static/media/project-img1.a7c8b5e62feabdf3139f.png",
+    "static/media/play-proj-img1.jpg": "/static/media/play-proj-img1.5b42d566cb00f6bdfddf.jpg",
+    "static/media/hack-proj-img1.png": "/static/media/hack-proj-img1.b27cf0709f7edc5c07b0.png",
+    "static/media/about-image.jpeg": "/static/media/about-image.fb817a96832168fa2584.jpeg",
+    "static/media/CentraNo2-Bold.ttf": "/static/media/CentraNo2-Bold.2faff7f7d3fc92a2fcd9.ttf",
+    "static/media/CentraNo2-Medium.ttf": "/static/media/CentraNo2-Medium.f94be5b326d78bb32b95.ttf",
+    "static/media/CentraNo2-Book.ttf": "/static/media/CentraNo2-Book.2b143fa4b734a3584043.ttf",
+    "static/media/project-img2.png": "/static/media/project-img2.643cc226e452999fd523.png",
+    "static/media/project-img5.png": "/static/media/project-img5.75c09bd0b0a357749367.png",
+    "static/media/project-img6.png": "/static/media/project-img6.fb82c3415bcf1cefa503.png",
+    "static/media/project-img7.png": "/static/media/project-img7.15bf0d27b1d9d38f5581.png",
+    "static/media/project-img8.jpeg": "/static/media/project-img8.af983fa45cc3c4fbb298.jpeg",
+    "static/media/revicons.eot": "/static/media/revicons.a77de540a38981833f9e.eot",
+    "static/media/revicons.ttf": "/static/media/revicons.57fd05d4ae650374c8de.ttf",
+    "static/media/revicons.woff": "/static/media/revicons.e8746a624ed098489406.woff",
+    "static/media/nav-icon4.svg": "/static/media/nav-icon4.80a6fe9150beaa898cf9d92410a89476.svg",
+    "static/media/nav-icon1.svg": "/static/media/nav-icon1.3d526b8bd9f7edfb0be8b6aeb0e9cec2.svg",
+    "index.html": "/index.html",
+    "main.36e0b3b7.css.map": "/static/css/main.36e0b3b7.css.map",
+    "main.862fc871.js.map": "/static/js/main.862fc871.js.map",
+    "453.298f5782.chunk.js.map": "/static/js/453.298f5782.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.36e0b3b7.css",
+    "static/js/main.862fc871.js"
+  ]
+}
