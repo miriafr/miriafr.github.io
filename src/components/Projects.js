@@ -128,7 +128,7 @@ export const Projects = () => {
                 <Row>
                     <Col size={12}>
                         <h2>Projects</h2>
-                        <p className="projects-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                        <p className="projects-p">Below are some highlights from my work combining code, creativity, and practical problem-solving </p>
                         <Tab.Container id="projects-tabs" defaultActiveKey="first" onSelect={(tab) => setActiveTab(tab)}>
                             <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                                 <Nav.Item>
