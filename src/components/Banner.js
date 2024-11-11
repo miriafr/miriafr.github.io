@@ -1,10 +1,8 @@
 import { useState, useEffect } from "react"
 import { Row, Col, Container } from "react-bootstrap"
-import HeaderImg from '../assets/img/header-img.svg'
 import HeaderChar from '../assets/img/header_character.png'
 import 'animate.css';
 import TrackVisibility from 'react-on-screen'
-import  LeoTooltip  from "./Tooltip"
 
 export const Banner = () => {
     const [loopNum, setLoopNum] = useState(0);
