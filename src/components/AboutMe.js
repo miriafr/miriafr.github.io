@@ -22,7 +22,7 @@ export const AboutMe = () => {
                             Working directly with our users, I saw the positive effect technology can have, and the potential that developers can have to create solutions that improve the world.<br/><br/>
 
                             Having worked both in radio and tech, I’m interested in the intersection of design, development, and media, and its impact on society. 
-                            A life-long learner I’m always seeking to expand my skills, broaden my perspective and challenging myself. I strive to create technology that makes our life better, but I’m not just focused on creating something good -I want to it to be fun too.<br/><br/>
+                            A life-long learner, I’m always seeking to expand my skills, broaden my perspective and challenging myself. I strive to create technology that makes our life better, but I’m not just focused on creating something good -I want to it to be fun too.<br/><br/>
 
                             When I’m not coding, I’m passionate about music, design, and my dog, Leo.
                         </p>
