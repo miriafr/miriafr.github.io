@@ -36,13 +36,13 @@ export const HciProject = () => {
                     <p>
                         This project was a collaborative effort, and we were all involved in every step, figuring out and learning at each stage. <br />
                         Although all three of us had a solid understanding of signal processing theory, applying it in new software environments presented a significant learning curve.<br/><br/>
-                        Designing the glove, we wanted the design to resemble a glove, and incorporate some sphere element to correspond with the virtual agent, and decided to create a circular grid to render the glove with.<br/><br/>
+                        Designing the controller, we wanted the design to resemble a glove, and incorporate some sphere element to correspond with the virtual agent, and decided to create a circular grid to render the glove with.<br/><br/>
                         Next, we needed to clearly define each movement to be able to correctly recognize each without mistakes.<br/><br/>
                         The last step was to develop a particle based system that has fluid movements, and create states to react to each gesture.
                     </p>
                 </Col>
             </Row>
-            <Row style={{ maxHeight: '300px' }}>
+            <Row style={{ Height: '300px' }}>
             <Col className="image-col">
                     <img className="project-img wide" src={img1} />
                     <figcaption>3D Printed Glove</figcaption>

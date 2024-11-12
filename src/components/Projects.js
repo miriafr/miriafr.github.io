@@ -132,7 +132,7 @@ export const Projects = () => {
                         <Tab.Container id="projects-tabs" defaultActiveKey="first" onSelect={(tab) => setActiveTab(tab)}>
                             <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                                 <Nav.Item>
-                                    <Nav.Link eventKey="first">Coding Projects</Nav.Link>
+                                    <Nav.Link eventKey="first">Coding</Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
                                     <Nav.Link eventKey="second">Miscellaneous</Nav.Link>
