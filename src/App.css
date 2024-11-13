@@ -438,6 +438,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   .project .carousel-container {
     height: 200px;
   }
+  .project .nav.nav-pills {
+    width: 82%;
+  }
   .proj-imgbx {
     height: 200px;
   }
