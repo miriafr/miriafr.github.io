@@ -282,23 +282,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .banner img {
-  /* animation: updown 3s linear infinite; */
   max-width: 100%;
   max-height: 614px;
-}
-
-@keyframes updown {
-  0% {
-    transform: translateY(-15px);
-  }
-
-  50% {
-    transform: translateY(15px);
-  }
-
-  100% {
-    transform: translateY(-15px);
-  }
 }
 
 .txt-rotate>.wrap {
@@ -443,6 +428,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   max-width: 260px;
 }
 @media (max-width: 464px) {
+  .banner{
+    padding-top:120px;
+  }
+  .banner h1{
+    height: 80px;
+    font-size: 40px;
+  }
   .project .carousel-container {
     height: 200px;
   }

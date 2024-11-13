@@ -47,7 +47,6 @@ export const Banner = () => {
                         <TrackVisibility>
                         {({ isVisible }) =>
                             <div className={isVisible ? "animate__animated animate__fadeInUp" : "invisible"}>
-                                {/* <span className="tagline"> Miri's Portfolio</span> */}
                                 <h1>{"Hi! I'm Miri, a "}<span className="wrap">{text}</span></h1>
                                 <p>Constantly looking for new ways to blend technology, design, and fun. Building meaningful tech solutions with a creative twist.</p>
                             </div>}
