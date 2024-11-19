@@ -12,8 +12,8 @@ function App() {
     <div className="App">
             <NavBar fullDisplay={true}/>
             <Banner />
-            <AboutMe />
             <Projects />
+            <AboutMe />
             <Footer />
     </div>
   );

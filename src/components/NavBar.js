@@ -23,13 +23,13 @@ export const NavBar = ({ fullDisplay }) => {
     }, [])
 
     const onUpdateActiveLink = (value) => {
-        setActiveLink(value);
-    }
-
+        setActiveLink(value); 
+    };
+    
     return (
         <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
             <Container>
-                <Navbar.Brand href="/">
+                <Navbar.Brand href="/#home" onClick={() => onUpdateActiveLink('home')}>
                     Miri Aframov
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav">
@@ -37,12 +37,10 @@ export const NavBar = ({ fullDisplay }) => {
                 </Navbar.Toggle>
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link href="/#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
-                        {fullDisplay &&
-                            <Fragment><Nav.Link href="#about" className={activeLink === 'about' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('about')}>About Me</Nav.Link>
-                                <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>
-                            </Fragment>
-                        }
+                        <Fragment>
+                            <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>
+                            <Nav.Link href="#about" className={activeLink === 'about' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('about')}>About Me</Nav.Link>
+                        </Fragment>
                     </Nav>
                     <span className="navbar-text">
                         <div className="social-icon">

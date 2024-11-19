@@ -44,27 +44,6 @@ export const Projects = () => {
             items: 1
         }
     };
-
-    const [selectedProject, setSelectedProject] = useState(null);
-    const [isExpanded, setIsExpanded] = useState(false);
-
-    const handleCardClick = (project) => {
-        if (!isExpanded) {
-            setSelectedProject(project);
-            setIsExpanded(true);
-        } else {
-            if (project.title === selectedProject.title) {
-                setIsExpanded(false);
-                setTimeout(() => setSelectedProject(null), 300);
-            } else{
-                setSelectedProject(project);
-            }
-        }
-    };
-    const handleClose = () => {
-        setIsExpanded(false);
-        setTimeout(() => setSelectedProject(null), 300);
-    }
     const projects = [
         {
             title: "Capstone Project",
@@ -121,6 +100,27 @@ export const Projects = () => {
         },
 
     ];
+
+    const [selectedProject, setSelectedProject] = useState(projects[0]);
+    const [isExpanded, setIsExpanded] = useState(true);
+
+    const handleCardClick = (project) => {
+        if (!isExpanded) {
+            setSelectedProject(project);
+            setIsExpanded(true);
+        } else {
+            if (project.title === selectedProject.title) {
+                setIsExpanded(false);
+                setTimeout(() => setSelectedProject(null), 300);
+            } else {
+                setSelectedProject(project);
+            }
+        }
+    };
+    const handleClose = () => {
+        setIsExpanded(false);
+        setTimeout(() => setSelectedProject(null), 300);
+    }
 
     return (
         <section className="project" id="projects">
