@@ -38,8 +38,8 @@ export const NavBar = ({ fullDisplay }) => {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
                         <Fragment>
-                            <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>
-                            <Nav.Link href="#about" className={activeLink === 'about' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('about')}>About Me</Nav.Link>
+                            <a href="#projects" className={activeLink === 'projects' ? 'active nav-link navbar-link' : 'nav-link navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Projects</a>
+                            <a href="#about" className={activeLink === 'about' ? 'active nav-link navbar-link ' : ' nav-link navbar-link'} onClick={() => onUpdateActiveLink('about')}>About Me</a>
                         </Fragment>
                     </Nav>
                     <span className="navbar-text">
