@@ -117,11 +117,6 @@ export const Projects = () => {
             }
         }
     };
-    const handleClose = () => {
-        setIsExpanded(false);
-        setTimeout(() => setSelectedProject(null), 300);
-    }
-
     return (
         <section className="project" id="projects">
             <Container>
@@ -184,9 +179,6 @@ export const Projects = () => {
                                 {selectedProject && (
                                     <div className="project-details-content">
                                         <selectedProject.detailsComponent />
-                                        <button className="btn btn-secondary" onClick={handleClose}>
-                                            Close
-                                        </button>
                                     </div>
                                 )}
                             </div>

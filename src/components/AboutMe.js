@@ -1,11 +1,15 @@
 import { Col, Row, Container } from "react-bootstrap";
 import "react-multi-carousel/lib/styles.css";
 import aboutImg from "../assets/img/about-image.jpeg"
-import LeoTooltip from "./Tooltip";
+import TrackVisibility from 'react-on-screen'
+import 'animate.css';
+
 export const AboutMe = () => {
     return (
         <section className="about" id="about">
-            <Container>
+            <TrackVisibility partialVisibility>
+            {({ isVisible }) =>
+            <Container className={isVisible ? "animate__animated animate__fadeIn" : "invisible" }>
                 <Row className="align-items-center about-bx">
                     <Col sm={12} xs={12} md={6} xl={4}>
                         <img className="about-img" src={aboutImg}></img>
@@ -28,7 +32,8 @@ export const AboutMe = () => {
                         </p>
                     </Col>
                 </Row>
-            </Container>
+            </Container>}
+            </TrackVisibility>
         </section>
     )
 }
