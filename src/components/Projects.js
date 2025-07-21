@@ -9,6 +9,7 @@ import proImg5 from '../assets/img/project-img5.png'
 import proImg6 from '../assets/img/project-img6.png'
 import proImg7 from '../assets/img/project-img7.png'
 import proImg8 from '../assets/img/project-img8.jpeg'
+import proImg9 from '../assets/img/pokemon-project.png'
 
 import 'animate.css';
 import Carousel from "react-multi-carousel";
@@ -21,6 +22,7 @@ import { PortfolioProject } from "./Projects/PortfolioProject";
 import { RadioProject } from "./Projects/RadioProject";
 import { PodcastProject } from "./Projects/PodcastProject";
 import { AiProject } from "./Projects/AiProject";
+import { PokemonProject } from "./Projects/PokemonProject";
 
 export const Projects = () => {
     const [activeTab, setActiveTab] = useState('first');
@@ -45,6 +47,12 @@ export const Projects = () => {
         }
     };
     const projects = [
+        {
+            title: "Who's That Pokemon?",
+            description: "Nostalgic guessing game in React & TypeScript",
+            imgUrl: proImg9,
+            detailsComponent: PokemonProject
+        },
         {
             title: "Capstone Project",
             description: "Mobile app with deep-learning computer vision",
